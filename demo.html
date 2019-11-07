@@ -1,0 +1,39 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<style>
+   .blur{
+      filter:blur(10px);
+      width:90vw;
+      height:90vh;
+   }
+   .no-blur{
+      transition:all 5s;
+      width:90vw;
+      height:90vh;
+   }
+</style>
+</head>
+
+<body>
+  <img  class='blur' src="small.jpg"/>
+  
+  
+  <script>
+   img=document.images[0];
+   bigImage=new Image();
+   bigImage.onload=function(){
+      img.src=bigImage.src;
+      img.className="no-blur";
+  }
+  setTimeout(function(){
+  
+bigImage.src='big.png';
+
+  },1000);
+  </script>
+</body>  
+</html>  
+    
+  
+  
